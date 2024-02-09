@@ -1,0 +1,4 @@
+.idea/
+.DS_Store
+corpora/**/poses
+corpora/**/segments

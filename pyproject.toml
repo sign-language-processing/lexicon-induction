@@ -1,0 +1,43 @@
+[project]
+name = "lexicon-induction"
+description = "Induce a lexicon from a continuous sign language corpus"
+version = "0.0.1"
+authors = [
+    { name = "Amit Moryossef", email = "amitmoryossef@gmail.com" },
+    { name = "Gomer Otterspeer", email = "gotterspeer@gmail.com" }
+]
+readme = "README.md"
+dependencies = [
+    "pose-format", # Working with pose files
+    "pympi-ling", # Working with ELAN files
+    "sign-language-datasets", # DGS Corpus utilities
+    "git+https://github.com/sign-language-processing/recognition", # Running recognition models
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pylint",
+]
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 120
+
+[tool.pylint]
+max-line-length = 120
+disable = [
+    "C0114", # Missing module docstring
+    "C0115", # Missing class docstring
+    "C0116", # Missing function or method docstring
+]
+good-names = ["i", "f", "x", "y"]
+
+[tool.setuptools]
+packages = [
+    "lexicon_induction",
+]
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["lexicon_induction"]
