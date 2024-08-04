@@ -33,7 +33,7 @@ We focus on the softmax layer output for label distributions.
 
 ### 4. Clustering
 - Signs are clustered based on softmax output vectors.
-- Assumes a Zipfian distribution over sign usage.
+- Assumes a Zipfian distribution over sign usage ([evidence](https://www.jbe-platform.com/content/journals/10.1075/gest.23014.kim))
 - Cluster sizes reflect this distribution.
 
 ### 5. Evaluation
